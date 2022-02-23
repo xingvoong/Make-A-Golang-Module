@@ -13,7 +13,7 @@ func main() {
 	log.SetFlags(0)
 
 	// Request a recommender message
-	message, err := sentences.Sentence("")
+	message, err := sentences.Sentence("Ultralearning")
 
 	if err != nil {
 		log.Fatal(err)

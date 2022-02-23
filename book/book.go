@@ -12,12 +12,15 @@ func main() {
 	log.SetPrefix("sentences: ")
 	log.SetFlags(0)
 
+	// A slice of books
+	books := []string{"Ultralearning", "Geek Love", "Deep Work"}
+
 	// Request a recommender message
-	message, err := sentences.Sentence("Ultralearning")
+	messages, err := sentences.Sentences(books)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(message)
+	fmt.Println(messages)
 }
